@@ -40,4 +40,6 @@ function addNote(){
 function deleteNote(deleteBtn){
     notesContainer.removeChild(deleteBtn.parentElement);
 }
-function editNote(){}
+function editNote(note){
+    note.contentEditable = true;
+}
