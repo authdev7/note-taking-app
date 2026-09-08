@@ -3,19 +3,41 @@ const newNoteText = document.getElementById("note-text");
 const createBtn = document.getElementById("create-btn");
 const notesContainer = document.querySelector(".notes");
 
+
+newNoteTitle.addEventListener("click", () => {
+    newNoteTitle.style.opacity = 1;
+})
+
+newNoteTitle.addEventListener("blur", ()=>{
+    if(newNoteTitle.textContent === "")
+        newNoteTitle.textContent = "Title";
+    newNoteTitle.style.opacity = 0.6;
+})
+
+const notePlaceholder = document.querySelector("#note-text p")
+notePlaceholder.addEventListener("click", () => {
+    notePlaceholder.style.opacity = 1;
+})
+
+notePlaceholder.addEventListener("blur", ()=>{
+    if(notePlaceholder.textContent === "")
+        notePlaceholder.textContent = "Title";
+    notePlaceholder.style.opacity = 0.6;
+})
+
 createBtn.addEventListener("click", addNote);
 
-function addNote(){
+function addNote() {
     const noteToAdd = document.createElement("div");
     const noteTitle = document.createElement("div");
     const noteText = document.createElement("div");
     const deleteBtn = document.createElement("button");
-    
-    
+
+
     // Setting the content of note and appending it to note
-    noteTitle.textContent = newNoteTitle.value;
-    noteText.textContent = newNoteText.value;
-    
+    noteTitle.textContent = newNoteTitle.textContent;
+    noteText.textContent = newNoteText.textContent;
+
     noteToAdd.appendChild(noteTitle);
     noteToAdd.appendChild(noteText);
 
@@ -23,7 +45,7 @@ function addNote(){
     deleteBtn.type = "button";
     deleteBtn.textContent = "🗑";
     deleteBtn.addEventListener("click", (event) => deleteNote(event.currentTarget)); // attaching delete functionality
-    
+
     noteToAdd.appendChild(deleteBtn);
 
     // Attaching editing functionality
@@ -33,13 +55,13 @@ function addNote(){
     notesContainer.appendChild(noteToAdd);
 
     //clearing the original note
-    newNoteText.value = "";
-    newNoteTitle.value = "";
+    newNoteTitle.textContent = "Title";
+    newNoteText.textContent = "Take a note...";
 }
 
-function deleteNote(deleteBtn){
+function deleteNote(deleteBtn) {
     notesContainer.removeChild(deleteBtn.parentElement);
 }
-function editNote(note){
+function editNote(note) {
     note.contentEditable = true;
 }
