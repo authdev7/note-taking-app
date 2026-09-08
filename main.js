@@ -14,15 +14,14 @@ newNoteTitle.addEventListener("blur", ()=>{
     newNoteTitle.style.opacity = 0.6;
 })
 
-const notePlaceholder = document.querySelector("#note-text p")
-notePlaceholder.addEventListener("click", () => {
-    notePlaceholder.style.opacity = 1;
+newNoteText.addEventListener("click", () => {
+    newNoteText.style.opacity = 1;
 })
 
-notePlaceholder.addEventListener("blur", ()=>{
-    if(notePlaceholder.textContent === "")
-        notePlaceholder.textContent = "Title";
-    notePlaceholder.style.opacity = 0.6;
+newNoteText.addEventListener("blur", ()=>{
+    if(newNoteText.textContent === "")
+        newNoteText.textContent = "Take a note...";
+    newNoteText.style.opacity = 0.6;
 })
 
 createBtn.addEventListener("click", addNote);

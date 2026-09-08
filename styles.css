@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family:  'Arial Narrow Bold', sans-serif;
+    font-family: 'Arial Narrow Bold', sans-serif;
     letter-spacing: 0.75px;
 }
 
@@ -19,7 +19,7 @@ body {
     background-color: #202124;
     color: #e8eaed;
     padding-top: 10px;
-    
+
 }
 
 
@@ -37,19 +37,15 @@ h1 {
     width: 300px;
     min-height: 150px;
     border: 1px solid #5f6368;
-    
+    opacity: 0.6;
 }
 
-#new-note div  {
+#new-note p {
     width: 100%;
 }
 
 #title {
-    width: 100%;
     margin-bottom: 10px;
-}
-
-#title {
     font-size: 1.5rem;
 }
 
@@ -57,15 +53,14 @@ h1 {
     outline: none;
 }
 
-#note-text p {
+#note-text {
     min-height: 50px;
 }
-#note-text p:focus {
+
+#note-text:focus {
     outline: none;
 }
-#new-note p {
-    opacity: 0.6;
-}
+
 
 #create-btn {
     display: block;
