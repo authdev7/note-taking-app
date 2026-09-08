@@ -19,7 +19,9 @@ body {
     background-color: #202124;
     color: #e8eaed;
     padding-top: 10px;
+    
 }
+
 
 h1 {
     text-align: center;
@@ -35,23 +37,23 @@ h1 {
     width: 300px;
     min-height: 150px;
     border: 1px solid #5f6368;
+    
 }
 
 #new-note div  {
     width: 100%;
-    background-color: #202124;
 }
 
 #title {
+    width: 100%;
     margin-bottom: 10px;
-    
 }
 
-#title p {
+#title {
     font-size: 1.5rem;
 }
 
-#title p:focus {
+#title:focus {
     outline: none;
 }
 
@@ -63,4 +65,20 @@ h1 {
 }
 #new-note p {
     opacity: 0.6;
+}
+
+#create-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #202124;
+    border: 1px solid #5f6368;
+    color: #e8eaed;
+    padding: 0.75em;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+#create-btn:hover {
+    opacity: 1;
+    cursor: pointer;
 }
