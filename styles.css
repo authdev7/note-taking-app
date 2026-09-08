@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: #202124;
+    color: #e8eaed;
+}
+
+h1 {
+    text-align: center;
+}
+
+#new-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding: 1em;
+    min-width: 250px;
+    min-height: 150px;
+    border: 1px solid #5f6368;
+}
+
+#new-note input {
+    border: none;
+    background-color: #202124;
+}
